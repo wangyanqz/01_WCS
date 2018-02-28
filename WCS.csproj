@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B5B86B2-BFEB-4CA7-9A9A-4EC66F0C64D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCS</RootNamespace>
+    <AssemblyName>WCS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin4">
+      <HintPath>res\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>.\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Users\Administrator\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcRcw.Comn">
+      <HintPath>E:\迅雷下载\X86\1.10.100.0\OpcRcw.Comn.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpcRcw.Da">
+      <HintPath>E:\迅雷下载\opcrcw.da_dll(downyi.com)\3.00.100.0\OpcRcw.Da.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeDef.cs" />
+    <Compile Include="BillCodeDef.cs" />
+    <Compile Include="CarBarcode.cs" />
+    <Compile Include="Car_Dev.cs" />
+    <Compile Include="Car_Pos.cs" />
+    <Compile Include="DeviceBase.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPipeline_Speed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPortAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPortManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPortPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetWmsCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSortNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateSiteCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarpos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSSJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GloabData.cs" />
+    <Compile Include="ItemOff.cs" />
+    <Compile Include="KZAN_Dev.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="ManualPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualPlan.Designer.cs">
+      <DependentUpon>ManualPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OPCServer.cs" />
+    <Compile Include="OPCServerAsyn.cs" />
+    <Compile Include="Pipeline_Speed.cs" />
+    <Compile Include="PlcSystemMS.cs" />
+    <Compile Include="PortConf.cs" />
+    <Compile Include="PortConfReturn.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ParamSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParamSettings.Designer.cs">
+      <DependentUpon>ParamSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sortcode_outport.cs" />
+    <Compile Include="SSJ_Dev.cs" />
+    <Compile Include="TaskAutoRun.cs" />
+    <Compile Include="tcp\SocketClient.cs" />
+    <Compile Include="WCS.Data.cs" />
+    <Compile Include="ZddrInf.cs" />
+    <Compile Include="ZDDR_Dev.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPortPackage.resx">
+      <DependentUpon>FormPortPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetWmsCon.resx">
+      <DependentUpon>FormSetWmsCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarpos.resx">
+      <DependentUpon>FrmCarpos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualPlan.resx">
+      <DependentUpon>ManualPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ParamSettings.resx">
+      <DependentUpon>ParamSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\Chute-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\close_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\icon-08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\init-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\param-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\SNBC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\start-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\stop-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\默认状态\view-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\Chute-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\close_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\init-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\param-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\snbc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\start-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\statistics-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\stop-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\鼠标停留\view-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\connect-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\connect-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\connect-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\plan-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\plan-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\plan-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\route-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\route-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\route-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\start-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\start-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\start-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\stop-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\stop-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\stop-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\warning.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

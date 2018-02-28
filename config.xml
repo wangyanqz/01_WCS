@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<configuration>
+  <parameter>
+    <error_nodata1>223</error_nodata1>
+    <error_noport1>223</error_noport1>
+    <error_nodata2>223</error_nodata2>
+    <error_noport2>223</error_noport2>
+    <error_port>223</error_port>
+    <if_handcode>1</if_handcode>
+    <maxTurnNumer>1</maxTurnNumer>
+    <dbip>127.0.0.1</dbip>
+    <dbport>10009</dbport>
+    <db1ip>192.168.140.107</db1ip>
+	<plcip>192.168.141.30</plcip>
+  </parameter>
+  <url>
+    <zt_url>http://192.168.16.20/Service.svc/Tasks/GetPortConf</zt_url>
+  </url>
+</configuration>
